@@ -30,14 +30,14 @@ const Header = () => {
     <header className="relative w-full">
       <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5"
+          src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg"
           alt="Banner de um pet shop elegante"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 to-transparent">
           <div className="container mx-auto h-full flex items-center justify-center px-4">
             <div className="text-center">
-              <motion.img 
+              <motion.img
                 src={logo}
                 alt="Eliz Banho e Tosa"
                 className="w-48 sm:w-56 md:w-64 lg:w-80 mx-auto mb-4 sm:mb-6"
@@ -45,7 +45,7 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               />
-              <motion.h2 
+              <motion.h2
                 className="text-white text-lg sm:text-xl md:text-2xl lg:text-4xl font-playfair mb-3 sm:mb-4 px-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -53,8 +53,8 @@ const Header = () => {
               >
                 Carinho e cuidado que seu pet merece
               </motion.h2>
-              <motion.a 
-                href="#contact" 
+              <motion.a
+                href="#contact"
                 className="inline-block bg-gradient from-aqua to-lavender hover:from-lavender hover:to-aqua text-white font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-full transition-all duration-300 shadow-lg text-sm sm:text-base"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -67,17 +67,17 @@ const Header = () => {
         </div>
       </div>
 
-      <nav 
+      <nav
         className={`w-full py-3 sm:py-4 px-4 sm:px-6 ${
-          isScrolled 
-            ? 'fixed top-0 left-0 right-0 bg-white shadow-md z-40 transition-all duration-300' 
+          isScrolled
+            ? 'fixed top-0 left-0 right-0 bg-white shadow-md z-40 transition-all duration-300'
             : 'absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm'
         }`}
       >
         <div className="container mx-auto flex justify-between items-center">
           {isScrolled && (
             <Link to="/" className="flex items-center">
-              <img 
+              <img
                 src={logo}
                 alt="Eliz Banho e Tosa"
                 className="h-8 sm:h-10 lg:h-12"
@@ -89,8 +89,8 @@ const Header = () => {
             <ul className="flex space-x-6 lg:space-x-8">
               {NAV_ITEMS.map((item) => (
                 <li key={item.name}>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="font-cormorant text-base lg:text-lg hover:text-aqua transition-colors text-charcoal"
                   >
                     {item.name}
@@ -100,7 +100,7 @@ const Header = () => {
             </ul>
           </div>
 
-          <button 
+          <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden text-charcoal/70 hover:text-charcoal p-1"
             aria-label="Menu"
@@ -112,7 +112,7 @@ const Header = () => {
 
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
+          <motion.div
             className="fixed inset-0 z-50 md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -121,7 +121,7 @@ const Header = () => {
           >
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
 
-            <motion.div 
+            <motion.div
               className="absolute top-0 right-0 h-full w-64 bg-white shadow-2xl"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -129,7 +129,7 @@ const Header = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="flex justify-between items-center p-4 border-b border-gray-100">
-                <img 
+                <img
                   src={logo}
                   alt="Eliz Banho e Tosa"
                   className="h-8"
@@ -151,7 +151,7 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <a 
+                    <a
                       href={item.href}
                       className="block font-cormorant text-lg py-3 px-6 text-charcoal hover:bg-lavender-lightest hover:text-aqua"
                       onClick={() => setMobileMenuOpen(false)}
