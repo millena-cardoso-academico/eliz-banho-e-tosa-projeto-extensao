@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin } from 'lucide-react'
-import localImage from '@/assets/images/local/local.jpg'
+import localImage from '@/assets/images/local/liz_local.jpg'
 
 const Location: React.FC = () => {
   const [flipped, setFlipped] = useState(false)
